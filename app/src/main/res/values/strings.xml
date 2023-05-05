@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FireDbCrud</string>
+    <string name="sign_in">Sign In</string>
+    <string name="Gsign_text">Please Sign In With Your \nGoogle Account !</string>
 </resources>
