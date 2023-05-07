@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.piyush2k24.firedbcrud.MainActivity
 import com.piyush2k24.firedbcrud.R
+import com.piyush2k24.firedbcrud.UserOperation
 import com.piyush2k24.firedbcrud.databinding.GoogleSigninBinding
 
 class GoogleSignIn : AppCompatActivity() {
@@ -75,7 +76,7 @@ class GoogleSignIn : AppCompatActivity() {
             .addOnCompleteListener {
                 if (it.isSuccessful){
                     showToast("Successfully Sign In")
-                    startActivity(Intent(this@GoogleSignIn,MainActivity::class.java))
+                    startActivity(Intent(this@GoogleSignIn,UserOperation::class.java))
                 }else{
                     showToast(it.exception.toString())
                 }

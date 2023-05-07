@@ -2,4 +2,9 @@
     <string name="app_name">FireDbCrud</string>
     <string name="sign_in">Sign In</string>
     <string name="Gsign_text">Please Sign In With Your \nGoogle Account !</string>
+    <string name="user_name">Name</string>
+    <string name="user_designation">Designation</string>
+    <string name="user_email">Email</string>
+    <string name="add_user">Add User</string>
+    <string name="user_registration">User Registration</string>
 </resources>
