@@ -1,22 +1,17 @@
-package com.piyush2k24.firedbcrud
+package com.piyush2k24.firedbcrud.Activities
 
-import android.app.Instrumentation.ActivityResult
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.media.MediaMetadataRetriever.BitmapParams
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.piyush2k24.firedbcrud.Holder.holder
+import com.piyush2k24.firedbcrud.Holder.UserHolder
 import com.piyush2k24.firedbcrud.databinding.ActivityUserOperationBinding
 import java.io.ByteArrayOutputStream
-import java.lang.Exception
-import java.util.Base64
 
 class UserOperation : AppCompatActivity() {
     private lateinit var binding: ActivityUserOperationBinding
@@ -38,6 +33,9 @@ class UserOperation : AppCompatActivity() {
         }
         binding.UserAdd.setOnClickListener {
             CreateNewUser()
+        }
+        binding.ShowUserList.setOnClickListener{
+            startActivity(Intent(applicationContext, UsersList::class.java))
         }
     }
 
@@ -64,7 +62,7 @@ class UserOperation : AppCompatActivity() {
     private fun CreateNewUser(){
         val Uid=databaseReference.push().key!!
 
-        val Users=holder(
+        val Users=UserHolder(
             sImage,
             binding.UserName.text.toString(),
             binding.UserEmail.text.toString(),
@@ -80,6 +78,8 @@ class UserOperation : AppCompatActivity() {
                 binding.UserName.text?.clear()
                 binding.UserEmail.text?.clear()
                 binding.UserDesignation.text?.clear()
+
+                startActivity(Intent(applicationContext, UsersList::class.java))
             }
             .addOnFailureListener {
                 showToast(it.message.toString())

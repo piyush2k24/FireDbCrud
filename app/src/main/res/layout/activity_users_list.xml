@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UsersList">
+    tools:context=".Activities.UsersList">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerUserDb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/firedb_user_list"
+        android:background="@color/primary"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

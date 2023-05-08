@@ -7,4 +7,5 @@
     <string name="user_email">Email</string>
     <string name="add_user">Add User</string>
     <string name="user_registration">User Registration</string>
+    <string name="show_users_list">Show Users List</string>
 </resources>

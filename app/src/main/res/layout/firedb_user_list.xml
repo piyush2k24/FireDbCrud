@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="12dp"
+    android:background="@drawable/bg_background"
+    android:backgroundTint="@color/background"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/UImage"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/plus"
+        app:civ_border_color="@color/secondary"
+        app:civ_border_width="1dp"
+        android:layout_margin="12dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="center"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/UName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="@string/user_name"
+            android:textSize="22sp"
+            android:fontFamily="@font/fira_mono"
+            android:textColor="@color/secondary"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/UEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="@string/user_email"
+            android:textSize="15sp"
+            android:fontFamily="@font/fira_mono"
+            android:textColor="@color/secondary"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/UDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="@string/user_designation"
+            android:textSize="15sp"
+            android:fontFamily="@font/fira_mono"
+            android:textColor="@color/secondary"/>
+    </LinearLayout>
+</LinearLayout>
